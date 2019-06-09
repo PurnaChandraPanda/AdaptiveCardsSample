@@ -15,7 +15,7 @@ This adaptive cards sample would just help walkthrough the use case of various A
 It might sound very old school. This can be enhanced futher that fit to business requirements.
 
 ```diff
-			Attachment cardAttachment;
+            Attachment cardAttachment;
 
             if (turnContext.Activity.Text =="flight"){
                 cardAttachment = CreateAdaptiveCardAttachment(_cards[0]);
@@ -38,12 +38,12 @@ It might sound very old school. This can be enhanced futher that fit to business
             }
             else
             {
-+				if (turnContext.Activity.Value != null) {
-+					await turnContext.SendActivityAsync(MessageFactory.Text(turnContext.Activity.Value.ToString()), cancellationToken);
++                if (turnContext.Activity.Value != null) {
++                    await turnContext.SendActivityAsync(MessageFactory.Text(turnContext.Activity.Value.ToString()), cancellationToken);
                     return;
                 }
-+               cardAttachment = CreateAdaptiveCardAttachment(_cards[5]);
++                cardAttachment = CreateAdaptiveCardAttachment(_cards[5]);
             }
 
-            await turnContext.SendActivityAsync(MessageFactory.Attachment(cardAttachment), cancellationToken);
++            await turnContext.SendActivityAsync(MessageFactory.Attachment(cardAttachment), cancellationToken);
 ```
