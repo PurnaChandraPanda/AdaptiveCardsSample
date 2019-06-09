@@ -1,0 +1,70 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "Adaptive Card design session",
+      "size": "large",
+      "weight": "bolder"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Conf Room 112/3377 (10)"
+    },
+    {
+      "type": "TextBlock",
+      "text": "12:30 PM - 1:30 PM"
+    },
+    {
+      "type": "TextBlock",
+      "text": "Snooze for"
+    },
+    {
+      "type": "Input.ChoiceSet",
+      "id": "snooze",
+      "style": "compact",
+      "choices": [
+        {
+          "title": "5 minutes",
+          "value": "5",
+          "isSelected": true
+        },
+        {
+          "title": "15 minutes",
+          "value": "15"
+        },
+        {
+          "title": "30 minutes",
+          "value": "30"
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.OpenUrl",
+      "method": "POST",
+      "url": "http://foo.com",
+      "title": "Snooze"
+    },
+    {
+      "type": "Action.OpenUrl",
+      "method": "POST",
+      "url": "http://foo.com",
+      "title": "I'll be late"
+    },
+    {
+      "type": "Action.OpenUrl",
+      "method": "POST",
+      "url": "http://foo.com",
+      "title": "Dismiss"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Submit",
+      "data": {}
+    }
+  ]
+}
