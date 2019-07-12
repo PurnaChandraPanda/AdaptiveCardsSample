@@ -62,7 +62,10 @@ namespace AdaptiveCardSample.Bots
             }
             else
             {
+                // reading the response from channel here as a JSON payload
                 if (turnContext.Activity.Value != null) {
+                    // out here, wrapping the JSON payload in string, and just telling the channel what payload is received
+                    // however, it can always be extended, where some kind of JSON parsing logic be tried on `turnContext.Activity.Value`, and read respective key-value pair data
                     await turnContext.SendActivityAsync(MessageFactory.Text(turnContext.Activity.Value.ToString()), cancellationToken);
                     return;
                 }
